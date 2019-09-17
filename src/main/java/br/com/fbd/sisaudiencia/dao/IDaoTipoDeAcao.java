@@ -1,0 +1,20 @@
+package br.com.fbd.sisaudiencia.dao;
+
+import br.com.fbd.sisaudiencia.model.TipoDeAcao;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ * Representa os serviços que têm que ser implementados pelo DaoTipoDeAcao.
+ * @author cristovao
+ */
+public interface IDaoTipoDeAcao {
+    boolean cadastrarTipoDeAcao(TipoDeAcao tipoDeAcao);
+    boolean removerTipoDeAcao(int id);
+    TipoDeAcao buscarTipoDeAcao(int id);
+    boolean editarTipoDeAcao(int id);
+}
