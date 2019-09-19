@@ -44,4 +44,23 @@ public class SQLUtil {
                 
     }
     
+    
+    public static class TipoDeAcao{
+        
+        private static String NOME_TABELA = "tipos_de_acao";
+        private static String COL_NOME = "tipo_de_acao";
+        
+        
+        public static String CREATE_TABLE = 
+                "CREATE TABLE " + NOME_TABELA +
+                "( id serial primary key, "+
+                COL_NOME + " varchar(255));";
+        
+        public static String INSERT_ALL =
+                "INSERT INTO " + NOME_TABELA +
+                "(" + COL_NOME +") values (?)";
+        
+    }
+        
+    
 }

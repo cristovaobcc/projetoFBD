@@ -5,9 +5,13 @@
  */
 package br.com.fbd.sisaudiencia.fachada;
 
+import br.com.fbd.sisaudiencia.business.BusinessTipoDeAcao;
 import br.com.fbd.sisaudiencia.business.BusinessVara;
+import br.com.fbd.sisaudiencia.business.IBusinessTipoDeAcao;
 import br.com.fbd.sisaudiencia.business.IBusinessVara;
+import br.com.fbd.sisaudiencia.excecoes.TipoDeAcaoException;
 import br.com.fbd.sisaudiencia.excecoes.VaraException;
+import br.com.fbd.sisaudiencia.model.TipoDeAcao;
 import br.com.fbd.sisaudiencia.model.Vara;
 import java.util.List;
 
@@ -19,12 +23,14 @@ public class Fachada implements IFachada{
     
     // Crie uma variavel de instancia para cada model utilizado.
     private IBusinessVara iBusinessVara;
+    private IBusinessTipoDeAcao iBusinessTipoDeAcao;
     
     // O padrão de projeto de fachada é o singleton.
     private static Fachada instance;
 
     private Fachada() {
         this.iBusinessVara = new BusinessVara();
+        this.iBusinessTipoDeAcao = new BusinessTipoDeAcao();
     }
     
     public static Fachada getInstance(){
@@ -59,6 +65,26 @@ public class Fachada implements IFachada{
 
     @Override
     public List<Vara> getVaras() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean cadastrarTipoDeAcao(TipoDeAcao tipoDeAcao) throws TipoDeAcaoException {
+        return iBusinessTipoDeAcao.cadastrarTipoDeAcao(tipoDeAcao);
+    }
+
+    @Override
+    public boolean removerTipoDeAcao(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public TipoDeAcao buscarTipoDeAcao(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean editarTipoDeAcao(int id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

@@ -51,10 +51,10 @@ public class DaoVara implements IDaoVara {
             if (e instanceof PSQLException) {
                 String st = e.getMessage();
                 String[] mensagemFatiada = st.split(" ");
+                // TODO: substituir esse for por uma regex!
                 for (String string : mensagemFatiada) {
                     if (string.contains("varas")) {
                         try {
-                            conexaoConnection = SqlConnection.getConnectionInstance();
                             preparedStatement = conexaoConnection.prepareStatement(SQLUtil.Vara.CREATE_TABLE);
                             preparedStatement.execute();
                             return this.cadastrarVara(vara);

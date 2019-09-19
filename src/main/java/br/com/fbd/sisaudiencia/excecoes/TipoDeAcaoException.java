@@ -9,10 +9,10 @@ package br.com.fbd.sisaudiencia.excecoes;
  *
  * @author cristovao
  */
-public class VaraException extends Exception {
+public class TipoDeAcaoException extends Exception {
 
-    public VaraException(String message) {
+    public TipoDeAcaoException(String message) {
         throw new UnsupportedOperationException(message);
     }
-  
+    
 }

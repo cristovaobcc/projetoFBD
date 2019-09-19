@@ -10,6 +10,8 @@ import br.com.fbd.sisaudiencia.model.TipoDeAcao;
 
 /**
  * Representa os serviços que têm que ser implementados pelo DaoTipoDeAcao.
+ * Nota: pode ser que os usuários não precisem utilizar todas essas
+ * funcionalidades na UI.
  * @author cristovao
  */
 public interface IDaoTipoDeAcao {
