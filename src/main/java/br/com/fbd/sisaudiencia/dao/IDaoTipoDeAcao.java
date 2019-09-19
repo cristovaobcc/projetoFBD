@@ -1,6 +1,7 @@
 package br.com.fbd.sisaudiencia.dao;
 
 import br.com.fbd.sisaudiencia.model.TipoDeAcao;
+import java.util.List;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -19,4 +20,5 @@ public interface IDaoTipoDeAcao {
     boolean removerTipoDeAcao(int id);
     TipoDeAcao buscarTipoDeAcao(int id);
     boolean editarTipoDeAcao(int id);
+    List<TipoDeAcao> getTipoDeAcao();
 }

@@ -7,6 +7,7 @@ package br.com.fbd.sisaudiencia.app;
 
 import br.com.fbd.sisaudiencia.dao.DaoVara;
 import br.com.fbd.sisaudiencia.fachada.Fachada;
+import br.com.fbd.sisaudiencia.model.SalaAudiencia;
 import br.com.fbd.sisaudiencia.model.TipoDeAcao;
 import br.com.fbd.sisaudiencia.model.Vara;
 
@@ -26,6 +27,8 @@ public class App {
             fachada.cadastrarTipoDeAcao(tipoDeAcao);
             tipoDeAcao.setNome("Aposentadoria Rural");
             fachada.cadastrarTipoDeAcao(tipoDeAcao);
+            SalaAudiencia salaAudiencia = new SalaAudiencia(1, "Juiz titular");
+            fachada.cadastrarSalaAudiencia(salaAudiencia);
             
         } catch (Exception e) {
             e.printStackTrace();

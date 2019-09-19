@@ -5,12 +5,16 @@
  */
 package br.com.fbd.sisaudiencia.fachada;
 
+import br.com.fbd.sisaudiencia.business.BusinessSalaDeAudiencia;
 import br.com.fbd.sisaudiencia.business.BusinessTipoDeAcao;
 import br.com.fbd.sisaudiencia.business.BusinessVara;
+import br.com.fbd.sisaudiencia.business.IBusinessSalaDeAudiencia;
 import br.com.fbd.sisaudiencia.business.IBusinessTipoDeAcao;
 import br.com.fbd.sisaudiencia.business.IBusinessVara;
+import br.com.fbd.sisaudiencia.excecoes.SalaDeAudienciaException;
 import br.com.fbd.sisaudiencia.excecoes.TipoDeAcaoException;
 import br.com.fbd.sisaudiencia.excecoes.VaraException;
+import br.com.fbd.sisaudiencia.model.SalaAudiencia;
 import br.com.fbd.sisaudiencia.model.TipoDeAcao;
 import br.com.fbd.sisaudiencia.model.Vara;
 import java.util.List;
@@ -24,6 +28,7 @@ public class Fachada implements IFachada{
     // Crie uma variavel de instancia para cada model utilizado.
     private IBusinessVara iBusinessVara;
     private IBusinessTipoDeAcao iBusinessTipoDeAcao;
+    private IBusinessSalaDeAudiencia iBusinessSalaDeAudiencia;
     
     // O padrão de projeto de fachada é o singleton.
     private static Fachada instance;
@@ -31,6 +36,7 @@ public class Fachada implements IFachada{
     private Fachada() {
         this.iBusinessVara = new BusinessVara();
         this.iBusinessTipoDeAcao = new BusinessTipoDeAcao();
+        this.iBusinessSalaDeAudiencia = new BusinessSalaDeAudiencia();
     }
     
     public static Fachada getInstance(){
@@ -67,7 +73,9 @@ public class Fachada implements IFachada{
     public List<Vara> getVaras() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+    
+    
+    // Metodos de TipoDeAcao
     @Override
     public boolean cadastrarTipoDeAcao(TipoDeAcao tipoDeAcao) throws TipoDeAcaoException {
         return iBusinessTipoDeAcao.cadastrarTipoDeAcao(tipoDeAcao);
@@ -88,5 +96,31 @@ public class Fachada implements IFachada{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-        
+    // Metodos de SalaAudiencia
+
+    @Override
+    public boolean cadastrarSalaAudiencia(SalaAudiencia salaAudiencia) throws SalaDeAudienciaException {
+        return this.iBusinessSalaDeAudiencia.cadastrarSalaAudiencia(salaAudiencia);
+    }
+
+    @Override
+    public boolean removerSalaAudiencia(Integer id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public SalaAudiencia atualizarSalaAudiencia(Integer id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public SalaAudiencia buscarSalaAudiencia(Integer id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<SalaAudiencia> getSalasAudiencia() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
 }

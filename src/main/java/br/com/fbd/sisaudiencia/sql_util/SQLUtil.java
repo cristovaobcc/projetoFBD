@@ -61,6 +61,25 @@ public class SQLUtil {
                 "(" + COL_NOME +") values (?)";
         
     }
+    
+    public static class SalaAudiencia{
+        private static String NOME_TABELA = "salas_de_audiencias";
+        private static String COL_NUMERO = "numero_sala";
+        private static String COL_NOME = "nome_sala";
+        
+        public static String CREATE_TABLE = 
+                "CREATE TABLE " + NOME_TABELA +
+                "( id serial primary key, "+
+                COL_NUMERO + " int," + 
+                COL_NOME + " varchar(255));";
+        
+        public static String INSERT_ALL = 
+                "INSERT INTO " + NOME_TABELA +
+                "(" + COL_NUMERO + ", "+
+                COL_NOME + ") values (?, ?);";
+                
+        
+    }
         
     
 }

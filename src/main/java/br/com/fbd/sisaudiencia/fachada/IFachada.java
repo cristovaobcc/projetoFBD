@@ -5,8 +5,10 @@
  */
 package br.com.fbd.sisaudiencia.fachada;
 
+import br.com.fbd.sisaudiencia.excecoes.SalaDeAudienciaException;
 import br.com.fbd.sisaudiencia.excecoes.TipoDeAcaoException;
 import br.com.fbd.sisaudiencia.excecoes.VaraException;
+import br.com.fbd.sisaudiencia.model.SalaAudiencia;
 import br.com.fbd.sisaudiencia.model.TipoDeAcao;
 import br.com.fbd.sisaudiencia.model.Vara;
 import java.util.List;
@@ -29,6 +31,14 @@ public interface IFachada {
     TipoDeAcao buscarTipoDeAcao(int id);
     boolean editarTipoDeAcao(int id);
     
+    // Métodos relativos ao model SalaAudiencia
+     boolean cadastrarSalaAudiencia(SalaAudiencia salaAudiencia) 
+            throws SalaDeAudienciaException;
+    boolean removerSalaAudiencia(Integer id);
+    SalaAudiencia atualizarSalaAudiencia(Integer id);
+    SalaAudiencia buscarSalaAudiencia(Integer id);
+    List<SalaAudiencia> getSalasAudiencia(); 
+
     // Métodos relativos a outros models devem ser postos daqui para baixo.
     // Separe-os por model.
 }
