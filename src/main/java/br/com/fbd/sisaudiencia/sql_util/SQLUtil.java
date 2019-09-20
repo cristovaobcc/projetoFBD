@@ -70,7 +70,7 @@ public class SQLUtil {
         public static String CREATE_TABLE = 
                 "CREATE TABLE " + NOME_TABELA +
                 "( id serial primary key, "+
-                COL_NUMERO + " int," + 
+                COL_NUMERO + " int, " + 
                 COL_NOME + " varchar(255));";
         
         public static String INSERT_ALL = 
@@ -80,6 +80,53 @@ public class SQLUtil {
                 
         
     }
+    
+    public static class Estado{
+        // TODO: ver com Heldon como inserir a consulta.
+        // Será que posso aproveita daqui? 
+        // https://www.ricardoarrigoni.com/cidades-brasil-lista-de-cidades-brasileiras-em-sql/
+        private static String NOME_TABELA = "estados";
+        private static String COL_NOME = "nome";
+        private static String COL_UF = "UF";
         
+        public static String CREATE_TABLE = 
+                "CREATE TABLE " + NOME_TABELA +
+                "( id serial primary key, "+
+                COL_NOME + " varchar(255), "+
+                COL_UF + " varchar(2));";
+        
+        public static String INSERT_ALL = 
+                "INSERT INTO " + NOME_TABELA +
+                "(" + COL_NOME +", " +
+                COL_UF + ") values "
+                + "('Acre', 'AC'), " +
+                    "('Alagoas', 'AL'), " +
+                    "('Amazonas', 'AM'), " +
+                    "('Amapá', 'AP'), " +
+                    "('Bahia', 'BA'), " +
+                    "('Ceará', 'CE'), " +
+                    "('Distrito Federal', 'DF'), " +
+                    "('Espírito Santo', 'ES'), " +
+                    "('Goiás', 'GO'), " +
+                    "('Maranhão', 'MA'), " +
+                    "('Minas Gerais', 'MG'), " +
+                    "('Mato Grosso do Sul', 'MS'), " +
+                    "('Mato Grosso', 'MT'), " +
+                    "('Pará', 'PA'), " +
+                    "('Paraíba', 'PB'), " +
+                    "('Pernambuco', 'PE'), " +
+                    "('Piauí', 'PI'), " +
+                    "('Paraná', 'PR'), " +
+                    "('Rio de Janeiro', 'RJ'), " +
+                    "('Rio Grande do Norte', 'RN'), " +
+                    "('Rondônia', 'RO'), " +
+                    "('Roraima', 'RR'), " +
+                    "('Rio Grande do Sul', 'RS'), " +
+                    "('Santa Catarina', 'SC'), " +
+                    "('Sergipe', 'SE'), " +
+                    "('São Paulo', 'SP'), " +
+                    "('Tocantins', 'TO');";
+        
+    }
     
 }

@@ -29,6 +29,7 @@ public class App {
             fachada.cadastrarTipoDeAcao(tipoDeAcao);
             SalaAudiencia salaAudiencia = new SalaAudiencia(1, "Juiz titular");
             fachada.cadastrarSalaAudiencia(salaAudiencia);
+            fachada.carregarEstados();
             
         } catch (Exception e) {
             e.printStackTrace();

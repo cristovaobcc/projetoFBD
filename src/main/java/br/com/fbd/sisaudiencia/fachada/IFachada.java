@@ -8,6 +8,7 @@ package br.com.fbd.sisaudiencia.fachada;
 import br.com.fbd.sisaudiencia.excecoes.SalaDeAudienciaException;
 import br.com.fbd.sisaudiencia.excecoes.TipoDeAcaoException;
 import br.com.fbd.sisaudiencia.excecoes.VaraException;
+import br.com.fbd.sisaudiencia.model.Estado;
 import br.com.fbd.sisaudiencia.model.SalaAudiencia;
 import br.com.fbd.sisaudiencia.model.TipoDeAcao;
 import br.com.fbd.sisaudiencia.model.Vara;
@@ -39,6 +40,11 @@ public interface IFachada {
     SalaAudiencia buscarSalaAudiencia(Integer id);
     List<SalaAudiencia> getSalasAudiencia(); 
 
+    // Métodos relativos ao model Estado
+    boolean carregarEstados();
+    Estado getEstado(Integer id);
+    List<Estado> getAll();
+    
     // Métodos relativos a outros models devem ser postos daqui para baixo.
     // Separe-os por model.
 }

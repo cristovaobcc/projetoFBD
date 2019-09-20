@@ -5,15 +5,18 @@
  */
 package br.com.fbd.sisaudiencia.fachada;
 
+import br.com.fbd.sisaudiencia.business.BusinessEstado;
 import br.com.fbd.sisaudiencia.business.BusinessSalaDeAudiencia;
 import br.com.fbd.sisaudiencia.business.BusinessTipoDeAcao;
 import br.com.fbd.sisaudiencia.business.BusinessVara;
+import br.com.fbd.sisaudiencia.business.IBusinessEstado;
 import br.com.fbd.sisaudiencia.business.IBusinessSalaDeAudiencia;
 import br.com.fbd.sisaudiencia.business.IBusinessTipoDeAcao;
 import br.com.fbd.sisaudiencia.business.IBusinessVara;
 import br.com.fbd.sisaudiencia.excecoes.SalaDeAudienciaException;
 import br.com.fbd.sisaudiencia.excecoes.TipoDeAcaoException;
 import br.com.fbd.sisaudiencia.excecoes.VaraException;
+import br.com.fbd.sisaudiencia.model.Estado;
 import br.com.fbd.sisaudiencia.model.SalaAudiencia;
 import br.com.fbd.sisaudiencia.model.TipoDeAcao;
 import br.com.fbd.sisaudiencia.model.Vara;
@@ -29,6 +32,7 @@ public class Fachada implements IFachada{
     private IBusinessVara iBusinessVara;
     private IBusinessTipoDeAcao iBusinessTipoDeAcao;
     private IBusinessSalaDeAudiencia iBusinessSalaDeAudiencia;
+    private IBusinessEstado iBusinessEstado;
     
     // O padrão de projeto de fachada é o singleton.
     private static Fachada instance;
@@ -37,6 +41,7 @@ public class Fachada implements IFachada{
         this.iBusinessVara = new BusinessVara();
         this.iBusinessTipoDeAcao = new BusinessTipoDeAcao();
         this.iBusinessSalaDeAudiencia = new BusinessSalaDeAudiencia();
+        this.iBusinessEstado = new BusinessEstado();
     }
     
     public static Fachada getInstance(){
@@ -120,6 +125,21 @@ public class Fachada implements IFachada{
 
     @Override
     public List<SalaAudiencia> getSalasAudiencia() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean carregarEstados() {
+        return this.iBusinessEstado.carregarEstados();
+    }
+            
+    @Override
+    public Estado getEstado(Integer id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<Estado> getAll() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
