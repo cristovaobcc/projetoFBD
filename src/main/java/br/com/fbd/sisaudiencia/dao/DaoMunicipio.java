@@ -5,7 +5,7 @@
  */
 package br.com.fbd.sisaudiencia.dao;
 
-import br.com.fbd.sisaudiencia.model.Estado;
+import br.com.fbd.sisaudiencia.model.Municipio;
 import br.com.fbd.sisaudiencia.sql_util.SQLUtil;
 import br.com.fbd.sisaudiencia.sql_util.SqlConnection;
 import java.sql.Connection;
@@ -17,51 +17,47 @@ import org.postgresql.util.PSQLException;
  *
  * @author cristovao
  */
-public class DaoEstado implements IDaoEstado{
-    
+public class DaoMunicipio implements IDaoMunicipio {
+
     private Connection conexaoConnection;
     private PreparedStatement preparedStatement;
 
     @Override
-    public boolean carregarEstados() {
-        conexaoConnection = SqlConnection.getConnectionInstance();
+    public boolean carregarMunicipios() {
         try {
-            preparedStatement = conexaoConnection.prepareStatement(SQLUtil.Estado.INSERT_ALL);
+            conexaoConnection = SqlConnection.getConnectionInstance();
+            preparedStatement = conexaoConnection.prepareStatement(SQLUtil.Municipio.INSERT_ALL);
             return preparedStatement.execute();
         } catch (Exception e) {
             if (e instanceof PSQLException) {
                 String st = e.getMessage();
                 String[] msgFatiada = st.split(" ");
                 for (String string : msgFatiada) {
-                    if (string.contains("estados")) {
+                    if (string.contains("municipios")) {
                         try {
                             preparedStatement = conexaoConnection.
                                     prepareStatement(SQLUtil.Estado.CREATE_TABLE);
                             preparedStatement.execute();
-                            return this.carregarEstados();
+                            return this.carregarMunicipios();
                         } catch (Exception ex) {
                             ex.printStackTrace();
                         }
                     }
                 }
             }
-            
             e.printStackTrace();
             return false;
-        }  
+        }
     }
-            
+
     @Override
-    public Estado getEstado(Integer id) {
-        // TODO: aqui provavelmente haverá uma consulta SQL para resgatar o Estado
-        // selecionado na UI.
-        
+    public Municipio getMunicipio(Integer id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public List<Estado> getAll() {
+    public List<Municipio> getAll(Integer idEstado) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }
