@@ -26,8 +26,8 @@ public class DaoMunicipio implements IDaoMunicipio {
     public boolean carregarMunicipios() {
         try {
             conexaoConnection = SqlConnection.getConnectionInstance();
-            preparedStatement = conexaoConnection.prepareStatement(SQLUtil.Municipio.INSERT_ALL);
-            return preparedStatement.execute();
+            
+            return SQLUtil.Municipio.insertAll(preparedStatement);
         } catch (Exception e) {
             if (e instanceof PSQLException) {
                 String st = e.getMessage();
