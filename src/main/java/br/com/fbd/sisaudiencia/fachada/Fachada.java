@@ -6,10 +6,12 @@
 package br.com.fbd.sisaudiencia.fachada;
 
 import br.com.fbd.sisaudiencia.business.BusinessEstado;
+import br.com.fbd.sisaudiencia.business.BusinessMunicipio;
 import br.com.fbd.sisaudiencia.business.BusinessSalaDeAudiencia;
 import br.com.fbd.sisaudiencia.business.BusinessTipoDeAcao;
 import br.com.fbd.sisaudiencia.business.BusinessVara;
 import br.com.fbd.sisaudiencia.business.IBusinessEstado;
+import br.com.fbd.sisaudiencia.business.IBusinessMunicipio;
 import br.com.fbd.sisaudiencia.business.IBusinessSalaDeAudiencia;
 import br.com.fbd.sisaudiencia.business.IBusinessTipoDeAcao;
 import br.com.fbd.sisaudiencia.business.IBusinessVara;
@@ -17,6 +19,7 @@ import br.com.fbd.sisaudiencia.excecoes.SalaDeAudienciaException;
 import br.com.fbd.sisaudiencia.excecoes.TipoDeAcaoException;
 import br.com.fbd.sisaudiencia.excecoes.VaraException;
 import br.com.fbd.sisaudiencia.model.Estado;
+import br.com.fbd.sisaudiencia.model.Municipio;
 import br.com.fbd.sisaudiencia.model.SalaAudiencia;
 import br.com.fbd.sisaudiencia.model.TipoDeAcao;
 import br.com.fbd.sisaudiencia.model.Vara;
@@ -33,6 +36,7 @@ public class Fachada implements IFachada{
     private IBusinessTipoDeAcao iBusinessTipoDeAcao;
     private IBusinessSalaDeAudiencia iBusinessSalaDeAudiencia;
     private IBusinessEstado iBusinessEstado;
+    private IBusinessMunicipio iBusinessMunicipio;
     
     // O padrão de projeto de fachada é o singleton.
     private static Fachada instance;
@@ -42,6 +46,7 @@ public class Fachada implements IFachada{
         this.iBusinessTipoDeAcao = new BusinessTipoDeAcao();
         this.iBusinessSalaDeAudiencia = new BusinessSalaDeAudiencia();
         this.iBusinessEstado = new BusinessEstado();
+        this.iBusinessMunicipio = new BusinessMunicipio();
     }
     
     public static Fachada getInstance(){
@@ -142,5 +147,22 @@ public class Fachada implements IFachada{
     public List<Estado> getAll() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public boolean carregarMunicipios() {
+        return iBusinessMunicipio.carregarMunicipios();
+    }
+
+    @Override
+    public Municipio getMunicipio(Integer id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<Municipio> getAll(Integer idEstado) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
     
 }

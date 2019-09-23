@@ -140,9 +140,12 @@ public class SQLUtil {
                 COL_NOME + " varchar(255), "
                 + COL_ID_ESTADO_FK + " int));";
         
+        // TODO: colocar os dados abaixo em um arquivo separado e, lendo
+        // dele,inserir numa tabela de BD. Talvez seja o caso de criar uma
+        // classe estática para isso.
         public static String INSERT_ALL = 
                 "INSERT INTO " + NOME_TABELA +
-                "(" + COL_NOME + ", " +
+                "(" + COL_NOME + ", " + +
                 COL_ID_ESTADO_FK + ") values " +
                 "('Afonso Cláudio', 8), " +
                 "('Água Doce do Norte', 8), " +

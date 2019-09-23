@@ -30,6 +30,7 @@ public class App {
             SalaAudiencia salaAudiencia = new SalaAudiencia(1, "Juiz titular");
             fachada.cadastrarSalaAudiencia(salaAudiencia);
             fachada.carregarEstados();
+            fachada.carregarMunicipios();
             
         } catch (Exception e) {
             e.printStackTrace();
