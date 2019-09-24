@@ -18,6 +18,7 @@ import br.com.fbd.sisaudiencia.business.IBusinessVara;
 import br.com.fbd.sisaudiencia.excecoes.SalaDeAudienciaException;
 import br.com.fbd.sisaudiencia.excecoes.TipoDeAcaoException;
 import br.com.fbd.sisaudiencia.excecoes.VaraException;
+import br.com.fbd.sisaudiencia.model.Endereco;
 import br.com.fbd.sisaudiencia.model.Estado;
 import br.com.fbd.sisaudiencia.model.Municipio;
 import br.com.fbd.sisaudiencia.model.SalaAudiencia;
@@ -30,6 +31,7 @@ import java.util.List;
  * @author cristovao
  */
 public class Fachada implements IFachada{
+
     
     // Crie uma variavel de instancia para cada model utilizado.
     private IBusinessVara iBusinessVara;
@@ -163,6 +165,30 @@ public class Fachada implements IFachada{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
+    @Override
+    public boolean cadastrarEndereco(Endereco endereco) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Endereco buscarEndereco(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Endereco atualizarEndereco(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean removerEndereco(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<Endereco> getEnderecos() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 }

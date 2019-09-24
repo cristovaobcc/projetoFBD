@@ -141,9 +141,7 @@ public class SQLUtil {
                 "( id serial primary key, "+
                 COL_NOME + " varchar(255), "
                 + COL_ID_ESTADO_FK + " int));";
-        
-        
-        
+      
         // TODO: implementar ao método para ler do arquivo municipios.txt e 
         // inserir os dados de municipios no BD.
         public static boolean insertAll(PreparedStatement preparedStatement){
@@ -167,7 +165,28 @@ public class SQLUtil {
                 "CREATE TABLE " + NOME_TABELA +
                 "( id serial primary key, " +
                 COL_RUA + " varchar(255), " +
-                COL_NUMERO + " int, "
+                COL_NUMERO + " int, " + 
+                COL_COMPLEMENTO + " varchar(255), " +
+                COL_BAIRRO + " varchar(225), " +
+                COL_CEP + " varchar(9), " +
+                COL_DISTANCIA_VARA + " float8, " + 
+                COL_ID_MUNICIPIO + " varchar(255)," +
+                COL_ID_ESTADO + " varchar(255);";
+        
+        /*
+         public static String INSERT_ALL =
+                "INSERT INTO " + NOME_TABELA +
+                "(" + COL_NOME +") values (?)";
+        */
+        
+        public static String INSERT_INTO = 
+                "INSERT INTO " + NOME_TABELA +
+                "("+COL_RUA+", " +COL_NUMERO+", " +
+                COL_COMPLEMENTO +", " + COL_BAIRRO +", " +
+                COL_CEP +", " + COL_DISTANCIA_VARA +", " +
+                COL_ID_MUNICIPIO +", " + COL_ID_ESTADO +
+                ") values (?,?,?,?,?,?,?,?)";
+                
                 
     }
         

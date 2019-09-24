@@ -12,8 +12,10 @@ package br.com.fbd.sisaudiencia.model;
 public class RegistroOAB {
     
     private Integer id;
-    private Integer idEstado; //#FK
     private Integer Numero;
+    private boolean suspensa; // 
+    private Integer idEstado; //#FK
+     
 
     public RegistroOAB(Integer idEstado, Integer Numero) {
         this.idEstado = idEstado;

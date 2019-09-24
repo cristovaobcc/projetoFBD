@@ -8,6 +8,7 @@ package br.com.fbd.sisaudiencia.fachada;
 import br.com.fbd.sisaudiencia.excecoes.SalaDeAudienciaException;
 import br.com.fbd.sisaudiencia.excecoes.TipoDeAcaoException;
 import br.com.fbd.sisaudiencia.excecoes.VaraException;
+import br.com.fbd.sisaudiencia.model.Endereco;
 import br.com.fbd.sisaudiencia.model.Estado;
 import br.com.fbd.sisaudiencia.model.Municipio;
 import br.com.fbd.sisaudiencia.model.SalaAudiencia;
@@ -50,6 +51,13 @@ public interface IFachada {
     boolean carregarMunicipios();
     Municipio getMunicipio(Integer id);
     List<Municipio> getAll(Integer idEstado);
+    
+    // Métodos relativos ao model Endereco
+    boolean cadastrarEndereco(Endereco endereco); // Create
+    Endereco buscarEndereco(int id); // Recover
+    Endereco atualizarEndereco(int id); // UpDate
+    boolean removerEndereco(int id); // Delete
+    List<Endereco> getEnderecos();
     
     // Métodos relativos a outros models devem ser postos daqui para baixo.
     // Separe-os por model.

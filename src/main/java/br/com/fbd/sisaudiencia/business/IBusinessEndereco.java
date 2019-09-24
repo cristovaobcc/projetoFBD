@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.fbd.sisaudiencia.dao;
+package br.com.fbd.sisaudiencia.business;
 
 import br.com.fbd.sisaudiencia.model.Endereco;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.List;
  *
  * @author cristovao
  */
-public interface IDaoEndereco {
+public interface IBusinessEndereco {
     
     boolean cadastrarEndereco(Endereco endereco); // Create
     Endereco buscarEndereco(int id); // Recover

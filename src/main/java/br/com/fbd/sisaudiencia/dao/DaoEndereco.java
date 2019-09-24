@@ -25,8 +25,24 @@ public class DaoEndereco implements IDaoEndereco {
     public boolean cadastrarEndereco(Endereco endereco) {
         try {
             conexaoConnection = SqlConnection.getConnectionInstance();
-            preparedStatement = conexaoConnection.prepareStatement(sql);
+            preparedStatement = conexaoConnection.prepareStatement(
+                SQLUtil.Endereco.INSERT_INTO);
+            preparedStatement.setString(1, endereco.getRua());
+            preparedStatement.setInt(2, endereco.getNumero());
+            preparedStatement.setString(3, endereco.getComplemento());
+            preparedStatement.setString(4, endereco.getBairro());
+            preparedStatement.setInt(5, endereco.getIdMunicipio());
+            preparedStatement.setInt( 6, endereco.getIdEstado());
+            preparedStatement.setString(7, endereco.getCEP());
+            preparedStatement.setFloat(8, 
+                    endereco.getDistanciaDaVara());
+            
+            return this.preparedStatement.execute();
+
         } catch (Exception e) {
+            //TODO: tratar a exceção aqui. Caso a tabela não exista, criá-la
+            // aqui dentro.
+            return false;
         }
     }
     
