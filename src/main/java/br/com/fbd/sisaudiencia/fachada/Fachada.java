@@ -20,6 +20,7 @@ import br.com.fbd.sisaudiencia.business.IBusinessVara;
 import br.com.fbd.sisaudiencia.excecoes.SalaDeAudienciaException;
 import br.com.fbd.sisaudiencia.excecoes.TipoDeAcaoException;
 import br.com.fbd.sisaudiencia.excecoes.VaraException;
+import br.com.fbd.sisaudiencia.model.Advogado;
 import br.com.fbd.sisaudiencia.model.Endereco;
 import br.com.fbd.sisaudiencia.model.Estado;
 import br.com.fbd.sisaudiencia.model.Municipio;
@@ -212,18 +213,41 @@ public class Fachada implements IFachada{
     }
 
     @Override
-    public boolean recuperarRegistroOab(RegistroOAB r) {
+    public RegistroOAB recuperarRegistroOab(String numero) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public RegistroOAB atualizarRegistroOAB(RegistroOAB r) {
+    public RegistroOAB atualizarRegistroOAB(String numero) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public RegistroOAB removerRegistroOAB(int id) {
+    public boolean removerRegistroOAB(String numero) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
+    // Métodos relativos ao model Advogado
+
+    @Override
+    public boolean adicionarAdvogado(Advogado a) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Advogado recupergarAdvogado(String nome) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Advogado atualizarAdvogado(String nome) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean removerAdvogado(String cpf) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
         
 }

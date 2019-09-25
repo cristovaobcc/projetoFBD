@@ -3,43 +3,35 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.fbd.sisaudiencia.dao;
+package br.com.fbd.sisaudiencia.business;
 
-import br.com.fbd.sisaudiencia.model.RegistroOAB;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
+import br.com.fbd.sisaudiencia.model.Advogado;
 
 /**
  *
  * @author cristovao
  */
-// TODO: implementar os métodos de interface.
-public class DaoRegistroOAB implements IDaoRegistroOab {
-    
-    private Connection conexaoConnection;
-    private PreparedStatement preparedStatement;
+// TODO: implementar
+public class BusinessAdvogado implements IBusinessAdvogado{
 
     @Override
-    public boolean adicionarRegistroOab(RegistroOAB r) {
+    public boolean adicionarAdvogado(Advogado a) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public RegistroOAB recuperarRegistroOab(String numero) {
+    public Advogado recupergarAdvogado(String nome) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public RegistroOAB atualizarRegistroOAB(String numero) {
+    public Advogado atualizarAdvogado(String nome) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public boolean removerRegistroOAB(String numero) {
+    public boolean removerAdvogado(String cpf) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-   
-  
     
 }

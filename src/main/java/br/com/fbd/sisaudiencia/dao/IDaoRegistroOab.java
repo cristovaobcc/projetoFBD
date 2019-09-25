@@ -14,8 +14,8 @@ import br.com.fbd.sisaudiencia.model.RegistroOAB;
 public interface IDaoRegistroOab {
     
     boolean adicionarRegistroOab(RegistroOAB r);
-    boolean recuperarRegistroOab(RegistroOAB r);
-    RegistroOAB atualizarRegistroOAB(RegistroOAB r);
-    RegistroOAB removerRegistroOAB(int id);
+    RegistroOAB recuperarRegistroOab(String numero);
+    RegistroOAB atualizarRegistroOAB(String numero);
+    boolean removerRegistroOAB(String numero);
     
 }

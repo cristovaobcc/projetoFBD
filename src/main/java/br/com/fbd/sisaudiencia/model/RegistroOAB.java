@@ -12,12 +12,12 @@ package br.com.fbd.sisaudiencia.model;
 public class RegistroOAB {
     
     private Integer id;
-    private Integer numero;
+    private String numero; // Coloquei String, pois assim posso abarcar o DV com letras
     private boolean suspensa; // 
     private Integer idEstado; //#FK
      
 
-    public RegistroOAB(Integer idEstado, Integer Numero) {
+    public RegistroOAB(Integer idEstado, String Numero) {
         this.idEstado = idEstado;
         this.numero = Numero;
     }
@@ -30,7 +30,7 @@ public class RegistroOAB {
         return idEstado;
     }
 
-    public Integer getNumero() {
+    public String getNumero() {
         return numero;
     }
 
@@ -42,7 +42,7 @@ public class RegistroOAB {
         this.idEstado = idEstado;
     }
 
-    public void setNumero(Integer Numero) {
+    public void setNumero(String Numero) {
         this.numero = Numero;
     }
 

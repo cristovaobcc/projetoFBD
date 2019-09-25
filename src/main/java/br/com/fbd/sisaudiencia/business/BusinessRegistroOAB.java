@@ -20,19 +20,20 @@ public class BusinessRegistroOAB implements IBusinessRegistroOAB{
     }
 
     @Override
-    public boolean recuperarRegistroOab(RegistroOAB r) {
+    public RegistroOAB recuperarRegistroOab(String numero) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public RegistroOAB atualizarRegistroOAB(RegistroOAB r) {
+    public RegistroOAB atualizarRegistroOAB(String numero) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public RegistroOAB removerRegistroOAB(int id) {
+    public boolean removerRegistroOAB(String numero) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
     
     
 }

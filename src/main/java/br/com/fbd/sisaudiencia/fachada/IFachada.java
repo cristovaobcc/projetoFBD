@@ -8,6 +8,7 @@ package br.com.fbd.sisaudiencia.fachada;
 import br.com.fbd.sisaudiencia.excecoes.SalaDeAudienciaException;
 import br.com.fbd.sisaudiencia.excecoes.TipoDeAcaoException;
 import br.com.fbd.sisaudiencia.excecoes.VaraException;
+import br.com.fbd.sisaudiencia.model.Advogado;
 import br.com.fbd.sisaudiencia.model.Endereco;
 import br.com.fbd.sisaudiencia.model.Estado;
 import br.com.fbd.sisaudiencia.model.Municipio;
@@ -63,9 +64,16 @@ public interface IFachada {
     
     // Métodos relativos ao model RegistroOAB
     boolean adicionarRegistroOab(RegistroOAB r);
-    boolean recuperarRegistroOab(RegistroOAB r);
-    RegistroOAB atualizarRegistroOAB(RegistroOAB r);
-    RegistroOAB removerRegistroOAB(int id);
+    RegistroOAB recuperarRegistroOab(String numero);
+    RegistroOAB atualizarRegistroOAB(String numero);
+    boolean removerRegistroOAB(String numero);
+    
+    
+    // Métodos relativos ao model Advogado
+    boolean adicionarAdvogado(Advogado a);
+    Advogado recupergarAdvogado(String nome);
+    Advogado atualizarAdvogado(String nome);
+    boolean removerAdvogado(String cpf);
     
     // Métodos relativos a outros models devem ser postos daqui para baixo.
     // Separe-os por model.
