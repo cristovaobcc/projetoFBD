@@ -6,6 +6,7 @@
 package br.com.fbd.sisaudiencia.dao;
 
 import br.com.fbd.sisaudiencia.model.Estado;
+import br.com.fbd.sisaudiencia.model.Municipio;
 import br.com.fbd.sisaudiencia.sql_util.SQLUtil;
 import br.com.fbd.sisaudiencia.sql_util.SqlConnection;
 import java.sql.Connection;
@@ -63,5 +64,11 @@ public class DaoEstado implements IDaoEstado{
     public List<Estado> getAll() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public List<Municipio> getMunicipios() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+       
     
 }

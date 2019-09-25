@@ -7,11 +7,13 @@ package br.com.fbd.sisaudiencia.fachada;
 
 import br.com.fbd.sisaudiencia.business.BusinessEstado;
 import br.com.fbd.sisaudiencia.business.BusinessMunicipio;
+import br.com.fbd.sisaudiencia.business.BusinessRegistroOAB;
 import br.com.fbd.sisaudiencia.business.BusinessSalaDeAudiencia;
 import br.com.fbd.sisaudiencia.business.BusinessTipoDeAcao;
 import br.com.fbd.sisaudiencia.business.BusinessVara;
 import br.com.fbd.sisaudiencia.business.IBusinessEstado;
 import br.com.fbd.sisaudiencia.business.IBusinessMunicipio;
+import br.com.fbd.sisaudiencia.business.IBusinessRegistroOAB;
 import br.com.fbd.sisaudiencia.business.IBusinessSalaDeAudiencia;
 import br.com.fbd.sisaudiencia.business.IBusinessTipoDeAcao;
 import br.com.fbd.sisaudiencia.business.IBusinessVara;
@@ -21,6 +23,7 @@ import br.com.fbd.sisaudiencia.excecoes.VaraException;
 import br.com.fbd.sisaudiencia.model.Endereco;
 import br.com.fbd.sisaudiencia.model.Estado;
 import br.com.fbd.sisaudiencia.model.Municipio;
+import br.com.fbd.sisaudiencia.model.RegistroOAB;
 import br.com.fbd.sisaudiencia.model.SalaAudiencia;
 import br.com.fbd.sisaudiencia.model.TipoDeAcao;
 import br.com.fbd.sisaudiencia.model.Vara;
@@ -39,6 +42,7 @@ public class Fachada implements IFachada{
     private IBusinessSalaDeAudiencia iBusinessSalaDeAudiencia;
     private IBusinessEstado iBusinessEstado;
     private IBusinessMunicipio iBusinessMunicipio;
+    private IBusinessRegistroOAB iBusinessRegistroOAB;
     
     // O padrão de projeto de fachada é o singleton.
     private static Fachada instance;
@@ -49,6 +53,7 @@ public class Fachada implements IFachada{
         this.iBusinessSalaDeAudiencia = new BusinessSalaDeAudiencia();
         this.iBusinessEstado = new BusinessEstado();
         this.iBusinessMunicipio = new BusinessMunicipio();
+        this.iBusinessRegistroOAB = new BusinessRegistroOAB();
     }
     
     public static Fachada getInstance(){
@@ -57,7 +62,8 @@ public class Fachada implements IFachada{
         }
         return instance;
     }
-
+    
+     // Métodos de Vara
     @Override
     public boolean cadastrarVara(Vara vara) throws VaraException {
         // Note que aqui só chamamo o método que implementa a regra de negocio.
@@ -134,7 +140,8 @@ public class Fachada implements IFachada{
     public List<SalaAudiencia> getSalasAudiencia() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+    
+     // Métodos de Estado
     @Override
     public boolean carregarEstados() {
         return this.iBusinessEstado.carregarEstados();
@@ -151,6 +158,12 @@ public class Fachada implements IFachada{
     }
 
     @Override
+    public List<Municipio> getMunicipios() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+  
+    // Métodos de Municípios   
+    @Override
     public boolean carregarMunicipios() {
         return iBusinessMunicipio.carregarMunicipios();
     }
@@ -165,6 +178,7 @@ public class Fachada implements IFachada{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
+    // Métodos de endereço
     @Override
     public boolean cadastrarEndereco(Endereco endereco) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -190,5 +204,26 @@ public class Fachada implements IFachada{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
-    
+    // Métodos de registro Oab
+
+    @Override
+    public boolean adicionarRegistroOab(RegistroOAB r) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean recuperarRegistroOab(RegistroOAB r) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public RegistroOAB atualizarRegistroOAB(RegistroOAB r) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public RegistroOAB removerRegistroOAB(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+        
 }

@@ -5,42 +5,34 @@
  */
 package br.com.fbd.sisaudiencia.business;
 
-import br.com.fbd.sisaudiencia.dao.DaoEstado;
-import br.com.fbd.sisaudiencia.dao.IDaoEstado;
-import br.com.fbd.sisaudiencia.model.Estado;
-import br.com.fbd.sisaudiencia.model.Municipio;
-import java.util.List;
+import br.com.fbd.sisaudiencia.model.RegistroOAB;
 
 /**
  *
  * @author cristovao
  */
-public class BusinessEstado implements IBusinessEstado{
-    
-    private IDaoEstado iDaoEstado;
+// TODO: Implementar e testar
+public class BusinessRegistroOAB implements IBusinessRegistroOAB{
 
-    public BusinessEstado() {
-        this.iDaoEstado = new DaoEstado();
-    }
-    
-    public boolean carregarEstados(){
-        return iDaoEstado.carregarEstados();
-    }
-    
     @Override
-    public Estado getEstado(Integer id) {
-        // TODO: Pensar em como fazer a implementação
+    public boolean adicionarRegistroOab(RegistroOAB r) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public List<Estado> getAll() {
+    public boolean recuperarRegistroOab(RegistroOAB r) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public List<Municipio> getMunicipios() {
+    public RegistroOAB atualizarRegistroOAB(RegistroOAB r) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public RegistroOAB removerRegistroOAB(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
     
 }

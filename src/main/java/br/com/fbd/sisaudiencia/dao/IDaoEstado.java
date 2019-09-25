@@ -6,6 +6,7 @@
 package br.com.fbd.sisaudiencia.dao;
 
 import br.com.fbd.sisaudiencia.model.Estado;
+import br.com.fbd.sisaudiencia.model.Municipio;
 import java.util.List;
 
 /**
@@ -16,5 +17,5 @@ public interface IDaoEstado {
     boolean carregarEstados();
     Estado getEstado(Integer id);
     List<Estado> getAll();
-    
+    List<Municipio> getMunicipios();
 }

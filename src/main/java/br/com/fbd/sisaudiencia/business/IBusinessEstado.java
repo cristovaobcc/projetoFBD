@@ -6,6 +6,7 @@
 package br.com.fbd.sisaudiencia.business;
 
 import br.com.fbd.sisaudiencia.model.Estado;
+import br.com.fbd.sisaudiencia.model.Municipio;
 import java.util.List;
 
 /**
@@ -16,4 +17,5 @@ public interface IBusinessEstado {
     boolean carregarEstados();
     Estado getEstado(Integer id);
     List<Estado> getAll();
+    List<Municipio> getMunicipios();
 }

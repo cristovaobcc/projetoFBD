@@ -11,6 +11,7 @@ import br.com.fbd.sisaudiencia.excecoes.VaraException;
 import br.com.fbd.sisaudiencia.model.Endereco;
 import br.com.fbd.sisaudiencia.model.Estado;
 import br.com.fbd.sisaudiencia.model.Municipio;
+import br.com.fbd.sisaudiencia.model.RegistroOAB;
 import br.com.fbd.sisaudiencia.model.SalaAudiencia;
 import br.com.fbd.sisaudiencia.model.TipoDeAcao;
 import br.com.fbd.sisaudiencia.model.Vara;
@@ -46,6 +47,7 @@ public interface IFachada {
     boolean carregarEstados();
     Estado getEstado(Integer id);
     List<Estado> getAll();
+    List<Municipio> getMunicipios();
     
     // Métodos relativos ao model Municipio
     boolean carregarMunicipios();
@@ -58,6 +60,12 @@ public interface IFachada {
     Endereco atualizarEndereco(int id); // UpDate
     boolean removerEndereco(int id); // Delete
     List<Endereco> getEnderecos();
+    
+    // Métodos relativos ao model RegistroOAB
+    boolean adicionarRegistroOab(RegistroOAB r);
+    boolean recuperarRegistroOab(RegistroOAB r);
+    RegistroOAB atualizarRegistroOAB(RegistroOAB r);
+    RegistroOAB removerRegistroOAB(int id);
     
     // Métodos relativos a outros models devem ser postos daqui para baixo.
     // Separe-os por model.

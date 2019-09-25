@@ -12,14 +12,14 @@ package br.com.fbd.sisaudiencia.model;
 public class RegistroOAB {
     
     private Integer id;
-    private Integer Numero;
+    private Integer numero;
     private boolean suspensa; // 
     private Integer idEstado; //#FK
      
 
     public RegistroOAB(Integer idEstado, Integer Numero) {
         this.idEstado = idEstado;
-        this.Numero = Numero;
+        this.numero = Numero;
     }
 
     public Integer getId() {
@@ -31,17 +31,23 @@ public class RegistroOAB {
     }
 
     public Integer getNumero() {
-        return Numero;
+        return numero;
     }
 
+    public boolean isSuspensa() {
+        return suspensa;
+    }
+    
     public void setIdEstado(Integer idEstado) {
         this.idEstado = idEstado;
     }
 
     public void setNumero(Integer Numero) {
-        this.Numero = Numero;
+        this.numero = Numero;
     }
-    
-    
+
+    public void setSuspensa(boolean suspensa) {
+        this.suspensa = suspensa;
+    }
     
 }
