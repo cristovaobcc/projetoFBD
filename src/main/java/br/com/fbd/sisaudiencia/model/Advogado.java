@@ -9,41 +9,18 @@ package br.com.fbd.sisaudiencia.model;
  *
  * @author cristovao
  */
-public class Advogado {
+public class Advogado extends PessoaFisica{
     
-    private Integer id;
-    private String cpf;
-    private String nome;
+    
     private Integer id_registroOab;
 
     public Advogado(String cpf, String nome, Integer id_registroOab) {
-        this.cpf = cpf;
-        this.nome = nome;
+        super(cpf, nome);
         this.id_registroOab = id_registroOab;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public String getNome() {
-        return nome;
     }
 
     public Integer getId_registroOab() {
         return id_registroOab;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 
     public void setId_registroOab(Integer id_registroOab) {
@@ -52,9 +29,7 @@ public class Advogado {
 
     @Override
     public String toString() {
-        return "Advogado{" + "id=" + id + ", cpf=" + cpf + ", nome=" + nome + 
-                ", id_registroOab=" + id_registroOab + '}';
+        return super.toString() + "Advogado{" + "id_registroOab=" + id_registroOab + '}';
     }
-       
-    
+   
 }
