@@ -25,6 +25,7 @@ import br.com.fbd.sisaudiencia.excecoes.SalaDeAudienciaException;
 import br.com.fbd.sisaudiencia.excecoes.TipoDeAcaoException;
 import br.com.fbd.sisaudiencia.excecoes.VaraException;
 import br.com.fbd.sisaudiencia.model.Advogado;
+import br.com.fbd.sisaudiencia.model.Audiencia;
 import br.com.fbd.sisaudiencia.model.Endereco;
 import br.com.fbd.sisaudiencia.model.Estado;
 import br.com.fbd.sisaudiencia.model.Municipio;
@@ -33,6 +34,7 @@ import br.com.fbd.sisaudiencia.model.RegistroOAB;
 import br.com.fbd.sisaudiencia.model.SalaAudiencia;
 import br.com.fbd.sisaudiencia.model.TipoDeAcao;
 import br.com.fbd.sisaudiencia.model.Vara;
+import java.time.LocalDate;
 import java.util.List;
 
 /**
@@ -277,6 +279,29 @@ public class Fachada implements IFachada{
 
     @Override
     public boolean removerProcesso(String numero) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    // Métodos relativos ao model Audiencia
+    // TODO: observar se os parametros inseridos por ora serão suficientes.
+    // pois pode haver alteraçoes em somente um turno de audiencias.
+    @Override
+    public boolean adicionarAudiencia(Audiencia a) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Audiencia recuperarAudiencia(LocalDate localDate) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Audiencia atualizarAudiencia(LocalDate localDate) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean removerAudiencia(LocalDate localDate) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

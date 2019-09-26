@@ -9,6 +9,7 @@ import br.com.fbd.sisaudiencia.excecoes.SalaDeAudienciaException;
 import br.com.fbd.sisaudiencia.excecoes.TipoDeAcaoException;
 import br.com.fbd.sisaudiencia.excecoes.VaraException;
 import br.com.fbd.sisaudiencia.model.Advogado;
+import br.com.fbd.sisaudiencia.model.Audiencia;
 import br.com.fbd.sisaudiencia.model.Endereco;
 import br.com.fbd.sisaudiencia.model.Estado;
 import br.com.fbd.sisaudiencia.model.Municipio;
@@ -17,6 +18,7 @@ import br.com.fbd.sisaudiencia.model.RegistroOAB;
 import br.com.fbd.sisaudiencia.model.SalaAudiencia;
 import br.com.fbd.sisaudiencia.model.TipoDeAcao;
 import br.com.fbd.sisaudiencia.model.Vara;
+import java.time.LocalDate;
 import java.util.List;
 
 /**
@@ -80,6 +82,14 @@ public interface IFachada {
     Processo recuperarProcesso(String numero);
     Processo atualizarProcesso(String numero);
     boolean removerProcesso(String numero);
+    
+    // Métodos relativos ao model Audiencia
+    // TODO: observar se os parametros inseridos por ora serão suficientes.
+    // pois pode haver alteraçoes em somente um turno de audiencias.
+    boolean adicionarAudiencia(Audiencia a);
+    Audiencia recuperarAudiencia(LocalDate localDate);
+    Audiencia atualizarAudiencia(LocalDate localDate);
+    boolean removerAudiencia(LocalDate localDate);
     
     // Métodos relativos a outros models devem ser postos daqui para baixo.
     // Separe-os por model.
