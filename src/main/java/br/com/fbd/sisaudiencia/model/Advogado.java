@@ -10,8 +10,7 @@ package br.com.fbd.sisaudiencia.model;
  * @author cristovao
  */
 public class Advogado extends PessoaFisica{
-    
-    
+       
     private Integer id_registroOab;
 
     public Advogado(String cpf, String nome, Integer id_registroOab) {

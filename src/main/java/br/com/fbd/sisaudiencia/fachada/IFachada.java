@@ -12,6 +12,7 @@ import br.com.fbd.sisaudiencia.model.Advogado;
 import br.com.fbd.sisaudiencia.model.Endereco;
 import br.com.fbd.sisaudiencia.model.Estado;
 import br.com.fbd.sisaudiencia.model.Municipio;
+import br.com.fbd.sisaudiencia.model.Processo;
 import br.com.fbd.sisaudiencia.model.RegistroOAB;
 import br.com.fbd.sisaudiencia.model.SalaAudiencia;
 import br.com.fbd.sisaudiencia.model.TipoDeAcao;
@@ -68,12 +69,17 @@ public interface IFachada {
     RegistroOAB atualizarRegistroOAB(String numero);
     boolean removerRegistroOAB(String numero);
     
-    
     // Métodos relativos ao model Advogado
     boolean adicionarAdvogado(Advogado a);
     Advogado recupergarAdvogado(String nome);
     Advogado atualizarAdvogado(String nome);
     boolean removerAdvogado(String cpf);
+    
+    // Métodos relativos ao model Processo
+    boolean adicionarProcesso(Processo p);
+    Processo recuperarProcesso(String numero);
+    Processo atualizarProcesso(String numero);
+    boolean removerProcesso(String numero);
     
     // Métodos relativos a outros models devem ser postos daqui para baixo.
     // Separe-os por model.

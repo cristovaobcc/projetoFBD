@@ -14,7 +14,7 @@ import java.util.ArrayList;
 // TODO: Avaliar se a implementação desta forma é o suficiente.
 public class Autor extends PessoaFisica{
     
-    private ArrayList<Processo> processos;
+    private ArrayList<Processo> processos; // Faz sentido Autor ter arraylist de processos?
 
     public Autor(String CPF, String nome) {
         super(CPF, nome);

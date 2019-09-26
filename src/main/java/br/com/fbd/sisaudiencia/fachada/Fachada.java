@@ -5,14 +5,18 @@
  */
 package br.com.fbd.sisaudiencia.fachada;
 
+import br.com.fbd.sisaudiencia.business.BusinessAdvogado;
 import br.com.fbd.sisaudiencia.business.BusinessEstado;
 import br.com.fbd.sisaudiencia.business.BusinessMunicipio;
+import br.com.fbd.sisaudiencia.business.BusinessProcesso;
 import br.com.fbd.sisaudiencia.business.BusinessRegistroOAB;
 import br.com.fbd.sisaudiencia.business.BusinessSalaDeAudiencia;
 import br.com.fbd.sisaudiencia.business.BusinessTipoDeAcao;
 import br.com.fbd.sisaudiencia.business.BusinessVara;
+import br.com.fbd.sisaudiencia.business.IBusinessAdvogado;
 import br.com.fbd.sisaudiencia.business.IBusinessEstado;
 import br.com.fbd.sisaudiencia.business.IBusinessMunicipio;
+import br.com.fbd.sisaudiencia.business.IBusinessProcesso;
 import br.com.fbd.sisaudiencia.business.IBusinessRegistroOAB;
 import br.com.fbd.sisaudiencia.business.IBusinessSalaDeAudiencia;
 import br.com.fbd.sisaudiencia.business.IBusinessTipoDeAcao;
@@ -24,6 +28,7 @@ import br.com.fbd.sisaudiencia.model.Advogado;
 import br.com.fbd.sisaudiencia.model.Endereco;
 import br.com.fbd.sisaudiencia.model.Estado;
 import br.com.fbd.sisaudiencia.model.Municipio;
+import br.com.fbd.sisaudiencia.model.Processo;
 import br.com.fbd.sisaudiencia.model.RegistroOAB;
 import br.com.fbd.sisaudiencia.model.SalaAudiencia;
 import br.com.fbd.sisaudiencia.model.TipoDeAcao;
@@ -44,6 +49,8 @@ public class Fachada implements IFachada{
     private IBusinessEstado iBusinessEstado;
     private IBusinessMunicipio iBusinessMunicipio;
     private IBusinessRegistroOAB iBusinessRegistroOAB;
+    private IBusinessAdvogado iBusinessAdvogado;
+    private IBusinessProcesso iBusinessProcesso;
     
     // O padrão de projeto de fachada é o singleton.
     private static Fachada instance;
@@ -55,6 +62,8 @@ public class Fachada implements IFachada{
         this.iBusinessEstado = new BusinessEstado();
         this.iBusinessMunicipio = new BusinessMunicipio();
         this.iBusinessRegistroOAB = new BusinessRegistroOAB();
+        this.iBusinessAdvogado = new BusinessAdvogado();
+        this.iBusinessProcesso = new BusinessProcesso();
     }
     
     public static Fachada getInstance(){
@@ -246,6 +255,28 @@ public class Fachada implements IFachada{
 
     @Override
     public boolean removerAdvogado(String cpf) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    // Métodos relativos ao model processo
+
+    @Override
+    public boolean adicionarProcesso(Processo p) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Processo recuperarProcesso(String numero) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Processo atualizarProcesso(String numero) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean removerProcesso(String numero) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
