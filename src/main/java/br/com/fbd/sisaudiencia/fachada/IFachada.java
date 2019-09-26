@@ -18,6 +18,7 @@ import br.com.fbd.sisaudiencia.model.RegistroOAB;
 import br.com.fbd.sisaudiencia.model.SalaAudiencia;
 import br.com.fbd.sisaudiencia.model.TipoDeAcao;
 import br.com.fbd.sisaudiencia.model.Vara;
+import br.com.fbd.sisaudiencia.model.VinculoAudienciaProcesso;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -91,6 +92,13 @@ public interface IFachada {
     Audiencia atualizarAudiencia(LocalDate localDate);
     boolean removerAudiencia(LocalDate localDate);
     
+    // Métodos relativos ao model VinculoAudienciaProcesso
+    boolean adicionarVinculoAudienciaProcesso(VinculoAudienciaProcesso a);
+    VinculoAudienciaProcesso recupergarVinculoAudienciaProcesso(Integer numero);
+    VinculoAudienciaProcesso atualizarVinculoAudienciaProcesso(Integer numero);
+    boolean removerVinculoAudienciaProcesso(Integer numero);
+    
+
     // Métodos relativos a outros models devem ser postos daqui para baixo.
     // Separe-os por model.
 }

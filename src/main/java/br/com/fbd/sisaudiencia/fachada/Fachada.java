@@ -34,6 +34,7 @@ import br.com.fbd.sisaudiencia.model.RegistroOAB;
 import br.com.fbd.sisaudiencia.model.SalaAudiencia;
 import br.com.fbd.sisaudiencia.model.TipoDeAcao;
 import br.com.fbd.sisaudiencia.model.Vara;
+import br.com.fbd.sisaudiencia.model.VinculoAudienciaProcesso;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -304,6 +305,30 @@ public class Fachada implements IFachada{
     public boolean removerAudiencia(LocalDate localDate) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
+    // Métodos relativos ao model VinculoAudienciaProcesso
+    // TODO: observar se os parametros inseridos por ora serão suficientes.
+       
+    @Override
+    public boolean adicionarVinculoAudienciaProcesso(VinculoAudienciaProcesso a) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public VinculoAudienciaProcesso recupergarVinculoAudienciaProcesso(Integer numero) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public VinculoAudienciaProcesso atualizarVinculoAudienciaProcesso(Integer numero) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean removerVinculoAudienciaProcesso(Integer numero) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
     
         
 }

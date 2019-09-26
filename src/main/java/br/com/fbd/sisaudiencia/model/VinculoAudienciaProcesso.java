@@ -11,5 +11,44 @@ package br.com.fbd.sisaudiencia.model;
  */
 // TODO: estudar como utilizar essa classe.
 public class VinculoAudienciaProcesso {
-    
+    private Integer id;
+    private Integer idAudiencia;
+    private Integer idProcesso;
+
+    public VinculoAudienciaProcesso(Integer id, Integer idAudiencia, Integer idProcesso) {
+        this.id = id;
+        this.idAudiencia = idAudiencia;
+        this.idProcesso = idProcesso;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public Integer getIdAudiencia() {
+        return idAudiencia;
+    }
+
+    public Integer getIdProcesso() {
+        return idProcesso;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public void setIdAudiencia(Integer idAudiencia) {
+        this.idAudiencia = idAudiencia;
+    }
+
+    public void setIdProcesso(Integer idProcesso) {
+        this.idProcesso = idProcesso;
+    }
+
+    @Override
+    public String toString() {
+        return "VinculoAudienciaProcesso{" + "id=" + id + ", idAudiencia=" + idAudiencia + ", idProcesso=" + idProcesso + '}';
+    }
+
+       
 }
