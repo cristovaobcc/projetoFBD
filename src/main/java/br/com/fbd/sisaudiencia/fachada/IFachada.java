@@ -90,14 +90,7 @@ public interface IFachada {
     boolean adicionarAudiencia(Audiencia a);
     Audiencia recuperarAudiencia(LocalDate localDate);
     Audiencia atualizarAudiencia(LocalDate localDate);
-    boolean removerAudiencia(LocalDate localDate);
-    
-    // Métodos relativos ao model VinculoAudienciaProcesso
-    boolean adicionarVinculoAudienciaProcesso(VinculoAudienciaProcesso a);
-    VinculoAudienciaProcesso recupergarVinculoAudienciaProcesso(Integer numero);
-    VinculoAudienciaProcesso atualizarVinculoAudienciaProcesso(Integer numero);
-    boolean removerVinculoAudienciaProcesso(Integer numero);
-    
+    boolean removerAudiencia(LocalDate localDate); 
 
     // Métodos relativos a outros models devem ser postos daqui para baixo.
     // Separe-os por model.

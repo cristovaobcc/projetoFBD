@@ -5,7 +5,9 @@
  */
 package br.com.fbd.sisaudiencia.business;
 
+import br.com.fbd.sisaudiencia.model.Audiencia;
 import br.com.fbd.sisaudiencia.model.Processo;
+import java.time.LocalDate;
 
 /**
  *
@@ -13,27 +15,28 @@ import br.com.fbd.sisaudiencia.model.Processo;
  */
 // TODO: observar se os parametros inseridos por ora serão suficientes.
 // pois pode haver alteraçoes em somente um turno de audiencias.
-public class BusinessAudiencia implements IBusinessProcesso{
+public class BusinessAudiencia implements IBusinessAudiencia{
 
     @Override
-    public boolean adicionarProcesso(Processo p) {
+    public boolean adicionarAudiencia(Audiencia a) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Processo recuperarProcesso(String numero) {
+    public Audiencia recuperarAudiencia(LocalDate localDate) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Processo atualizarProcesso(String numero) {
+    public Audiencia atualizarAudiencia(LocalDate localDate) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public boolean removerProcesso(String numero) {
+    public boolean removerAudiencia(LocalDate localDate) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
+      
     
 }
