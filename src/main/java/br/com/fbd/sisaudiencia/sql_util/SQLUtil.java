@@ -96,7 +96,7 @@ public class SQLUtil {
                 "( id serial primary key, "+
                 COL_NOME + " varchar(255), "+
                 COL_UF + " varchar(2));";
-        
+        // TODO: passar a lista de estados para um .txt.
         public static String INSERT_ALL = 
                 "INSERT INTO " + NOME_TABELA +
                 "(" + COL_NOME +", " +
@@ -139,7 +139,7 @@ public class SQLUtil {
         public static String CREATE_TABLE = 
                 "CREATE TABLE " + NOME_TABELA +
                 "( id serial primary key, "+
-                COL_NOME + " varchar(255), "
+                COL_NOME + " varchar(140), "
                 + COL_ID_ESTADO_FK + " int));";
       
         // TODO: implementar ao método para ler do arquivo municipios.txt e 

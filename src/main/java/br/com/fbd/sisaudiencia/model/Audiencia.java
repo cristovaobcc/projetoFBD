@@ -6,6 +6,7 @@
 package br.com.fbd.sisaudiencia.model;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 /**
  *
@@ -19,17 +20,17 @@ public class Audiencia {
     private Integer qtdeProcessosMarcados;
     private Integer qtdeProcessosAMarcar;
     private Integer idVara;
-    private Integer idVinculoAudienciaProcesso;
+    private ArrayList<Processo> processos;
 
     public Audiencia(LocalDate dataAudiencia, String turno, 
             Integer qtdeProcessosMarcados, Integer qtdeProcessosAMarcar, 
-            Integer idVara, Integer idVinculoAudienciaProcesso) {
+            Integer idVara) {
         this.dataAudiencia = dataAudiencia;
         this.turno = turno;
         this.qtdeProcessosMarcados = qtdeProcessosMarcados;
         this.qtdeProcessosAMarcar = qtdeProcessosAMarcar;
         this.idVara = idVara;
-        this.idVinculoAudienciaProcesso = idVinculoAudienciaProcesso;
+        this.processos = new ArrayList<>();
     }
 
     public Integer getId() {
@@ -56,8 +57,8 @@ public class Audiencia {
         return idVara;
     }
 
-    public Integer getIdVinculoAudienciaProcesso() {
-        return idVinculoAudienciaProcesso;
+    public ArrayList<Processo> getProcessos() {
+        return processos;
     }
 
     public void setId(Integer id) {
@@ -84,8 +85,8 @@ public class Audiencia {
         this.idVara = idVara;
     }
 
-    public void setIdVinculoAudienciaProcesso(Integer idVinculoAudienciaProcesso) {
-        this.idVinculoAudienciaProcesso = idVinculoAudienciaProcesso;
+    public void setProcessos(ArrayList<Processo> processos) {
+        this.processos = processos;
     }
 
     @Override
@@ -94,9 +95,8 @@ public class Audiencia {
                 ", turno=" + turno + ", qtdeProcessosMarcados=" + 
                 qtdeProcessosMarcados + ", qtdeProcessosAMarcar=" + 
                 qtdeProcessosAMarcar + ", idVara=" + idVara + 
-                ", idVinculoAudienciaProcesso=" + idVinculoAudienciaProcesso 
-                + '}';
+                ", processos=" + processos + '}';
     }
-  
-    
+
+   
 }

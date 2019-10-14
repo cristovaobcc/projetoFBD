@@ -30,6 +30,7 @@ public class DaoMunicipio implements IDaoMunicipio {
             return SQLUtil.Municipio.insertAll(preparedStatement);
         } catch (Exception e) {
             if (e instanceof PSQLException) {
+                //TODO: substituir o código repetido pelo tratador de exceção com Regex!
                 String st = e.getMessage();
                 String[] msgFatiada = st.split(" ");
                 for (String string : msgFatiada) {
